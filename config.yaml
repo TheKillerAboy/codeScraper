@@ -1,0 +1,14 @@
+codeforces-urls:
+  contest-url: "https://codeforces.com/contest/{contest_id}"
+  problem-url: "https://codeforces.com/contest/{contest_id}/problem/{problem_id}"
+file-extensions:
+  defaults:
+    input: 'in'
+    output: 'out'
+    cpp: 'cpp'
+    python: 'py'
+programming-language:
+  default: 'cpp'
+template-file:
+  cpp: C:\Users\Annekin\Documents\GitHub\programming-olympiad\C++_Solutions\TEMPLATES\TEMPLATE.cpp
+  python: ~
