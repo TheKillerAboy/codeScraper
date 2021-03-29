@@ -707,9 +707,9 @@
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\lib\\multiprocessing\\__init__.py',
    'PYMODULE'),
-  ('typing',
+  ('_py_abc',
    'C:\\Program Files (x86)\\Microsoft Visual '
-   'Studio\\Shared\\Python37_64\\lib\\typing.py',
+   'Studio\\Shared\\Python37_64\\lib\\_py_abc.py',
    'PYMODULE'),
   ('stringprep',
    'C:\\Program Files (x86)\\Microsoft Visual '
@@ -719,9 +719,9 @@
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\lib\\tracemalloc.py',
    'PYMODULE'),
-  ('_py_abc',
+  ('typing',
    'C:\\Program Files (x86)\\Microsoft Visual '
-   'Studio\\Shared\\Python37_64\\lib\\_py_abc.py',
+   'Studio\\Shared\\Python37_64\\lib\\typing.py',
    'PYMODULE'),
   ('boltons.strutils',
    'c:\\users\\annekin\\pycharmprojects\\codescraper\\venv\\lib\\site-packages\\boltons\\strutils.py',
@@ -1541,13 +1541,13 @@
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\DLLs\\_overlapped.pyd',
    'EXTENSION'),
-  ('python37.dll',
-   'C:\\Program Files (x86)\\Microsoft Visual '
-   'Studio\\Shared\\Python37_64\\python37.dll',
-   'BINARY'),
   ('VCRUNTIME140.dll',
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('python37.dll',
+   'C:\\Program Files (x86)\\Microsoft Visual '
+   'Studio\\Shared\\Python37_64\\python37.dll',
    'BINARY'),
   ('libssl-1_1.dll',
    'C:\\Program Files (x86)\\Microsoft Visual '

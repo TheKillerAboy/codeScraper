@@ -84,13 +84,13 @@
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\DLLs\\_overlapped.pyd',
    'EXTENSION'),
-  ('python37.dll',
-   'C:\\Program Files (x86)\\Microsoft Visual '
-   'Studio\\Shared\\Python37_64\\python37.dll',
-   'BINARY'),
   ('VCRUNTIME140.dll',
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('python37.dll',
+   'C:\\Program Files (x86)\\Microsoft Visual '
+   'Studio\\Shared\\Python37_64\\python37.dll',
    'BINARY'),
   ('libssl-1_1.dll',
    'C:\\Program Files (x86)\\Microsoft Visual '

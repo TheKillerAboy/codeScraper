@@ -148,11 +148,8 @@ class FireOperator:
 
         def tokenize(data):
             data = (''.join(map(lambda k: k if k not in string.whitespace else ' ', data))).replace('  ',' ')
-            if data[0]==' ':
-                data = data[1:]
-            if data[-1]==' ':
-                data = data[:-1]
-            return list(data.split(' '))
+            data = list(filter(lambda k:k !='',data.split(' ')))
+            return data
 
         def read_output_file(file):
             with open(file,'r') as f:
