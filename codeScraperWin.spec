@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['main.py'],
+a = Analysis(['cli.py'],
              pathex=[],
              binaries=[],
              datas=[('config.yaml', '.')],

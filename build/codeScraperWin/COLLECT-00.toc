@@ -92,13 +92,13 @@
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\VCRUNTIME140.dll',
    'BINARY'),
-  ('libcrypto-1_1.dll',
-   'C:\\Program Files (x86)\\Microsoft Visual '
-   'Studio\\Shared\\Python37_64\\DLLs\\libcrypto-1_1.dll',
-   'BINARY'),
   ('libssl-1_1.dll',
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\DLLs\\libssl-1_1.dll',
+   'BINARY'),
+  ('libcrypto-1_1.dll',
+   'C:\\Program Files (x86)\\Microsoft Visual '
+   'Studio\\Shared\\Python37_64\\DLLs\\libcrypto-1_1.dll',
    'BINARY'),
   ('base_library.zip',
    'C:\\Users\\Annekin\\PycharmProjects\\codeScraper\\build\\codeScraperWin\\base_library.zip',

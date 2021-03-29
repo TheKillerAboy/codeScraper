@@ -12,3 +12,8 @@ programming-language:
 template-file:
   cpp: C:\Users\Annekin\Documents\GitHub\programming-olympiad\C++_Solutions\TEMPLATES\TEMPLATE.cpp
   python: ~
+commands:
+  gpp-compile:
+    win32: "g++ {cpp} -o {exe}"
+  run-inputs:
+    win32: "{exe} < {input}"

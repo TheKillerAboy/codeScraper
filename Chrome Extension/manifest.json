@@ -1,0 +1,22 @@
+{
+  "name": "CodeScraper",
+  "description": "Scrap Codeforces Contest To Computer",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage","fileSystem"],
+  "host_permissions": ["http://localhost:7532/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "/images/sigma.png"
+    },
+    "scripts": ["js/bootstrap.min.js","js/jquery-3.6.0.js","popper.min.js","popup.js","socket.io.js"]
+  },
+  "icons":{
+    "128": "/images/sigma.png"
+  }
+
+}

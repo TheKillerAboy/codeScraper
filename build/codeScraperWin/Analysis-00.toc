@@ -1,4 +1,4 @@
-(['main.py'],
+(['cli.py'],
  ['C:\\Users\\Annekin\\PycharmProjects\\codeScraper'],
  ['codecs'],
  ['c:\\users\\annekin\\pycharmprojects\\codescraper\\venv\\lib\\site-packages\\_pyinstaller_hooks_contrib\\hooks\\stdhooks',
@@ -16,8 +16,8 @@
  [('pyi_rth_multiprocessing',
    'c:\\users\\annekin\\pycharmprojects\\codescraper\\venv\\lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
    'PYSOURCE'),
-  ('main',
-   'C:\\Users\\Annekin\\PycharmProjects\\codeScraper\\main.py',
+  ('cli',
+   'C:\\Users\\Annekin\\PycharmProjects\\codeScraper\\cli.py',
    'PYSOURCE')],
  [('multiprocessing.popen_spawn_posix',
    'C:\\Program Files (x86)\\Microsoft Visual '
@@ -226,10 +226,6 @@
   ('urllib.error',
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\lib\\urllib\\error.py',
-   'PYMODULE'),
-  ('string',
-   'C:\\Program Files (x86)\\Microsoft Visual '
-   'Studio\\Shared\\Python37_64\\lib\\string.py',
    'PYMODULE'),
   ('posixpath',
    'C:\\Program Files (x86)\\Microsoft Visual '
@@ -651,10 +647,6 @@
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\lib\\runpy.py',
    'PYMODULE'),
-  ('glob',
-   'C:\\Program Files (x86)\\Microsoft Visual '
-   'Studio\\Shared\\Python37_64\\lib\\glob.py',
-   'PYMODULE'),
   ('code',
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\lib\\code.py',
@@ -707,10 +699,6 @@
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\lib\\multiprocessing\\popen_spawn_win32.py',
    'PYMODULE'),
-  ('subprocess',
-   'C:\\Program Files (x86)\\Microsoft Visual '
-   'Studio\\Shared\\Python37_64\\lib\\subprocess.py',
-   'PYMODULE'),
   ('multiprocessing.spawn',
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\lib\\multiprocessing\\spawn.py',
@@ -719,21 +707,21 @@
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\lib\\multiprocessing\\__init__.py',
    'PYMODULE'),
-  ('tracemalloc',
-   'C:\\Program Files (x86)\\Microsoft Visual '
-   'Studio\\Shared\\Python37_64\\lib\\tracemalloc.py',
-   'PYMODULE'),
   ('typing',
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\lib\\typing.py',
    'PYMODULE'),
-  ('_py_abc',
-   'C:\\Program Files (x86)\\Microsoft Visual '
-   'Studio\\Shared\\Python37_64\\lib\\_py_abc.py',
-   'PYMODULE'),
   ('stringprep',
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('tracemalloc',
+   'C:\\Program Files (x86)\\Microsoft Visual '
+   'Studio\\Shared\\Python37_64\\lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'C:\\Program Files (x86)\\Microsoft Visual '
+   'Studio\\Shared\\Python37_64\\lib\\_py_abc.py',
    'PYMODULE'),
   ('boltons.strutils',
    'c:\\users\\annekin\\pycharmprojects\\codescraper\\venv\\lib\\site-packages\\boltons\\strutils.py',
@@ -1405,6 +1393,14 @@
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\lib\\webbrowser.py',
    'PYMODULE'),
+  ('subprocess',
+   'C:\\Program Files (x86)\\Microsoft Visual '
+   'Studio\\Shared\\Python37_64\\lib\\subprocess.py',
+   'PYMODULE'),
+  ('string',
+   'C:\\Program Files (x86)\\Microsoft Visual '
+   'Studio\\Shared\\Python37_64\\lib\\string.py',
+   'PYMODULE'),
   ('os',
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\lib\\os.py',
@@ -1412,6 +1408,10 @@
   ('logging',
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\lib\\logging\\__init__.py',
+   'PYMODULE'),
+  ('glob',
+   'C:\\Program Files (x86)\\Microsoft Visual '
+   'Studio\\Shared\\Python37_64\\lib\\glob.py',
    'PYMODULE'),
   ('asyncio',
    'C:\\Program Files (x86)\\Microsoft Visual '
@@ -1549,13 +1549,13 @@
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\VCRUNTIME140.dll',
    'BINARY'),
-  ('libcrypto-1_1.dll',
-   'C:\\Program Files (x86)\\Microsoft Visual '
-   'Studio\\Shared\\Python37_64\\DLLs\\libcrypto-1_1.dll',
-   'BINARY'),
   ('libssl-1_1.dll',
    'C:\\Program Files (x86)\\Microsoft Visual '
    'Studio\\Shared\\Python37_64\\DLLs\\libssl-1_1.dll',
+   'BINARY'),
+  ('libcrypto-1_1.dll',
+   'C:\\Program Files (x86)\\Microsoft Visual '
+   'Studio\\Shared\\Python37_64\\DLLs\\libcrypto-1_1.dll',
    'BINARY')],
  [],
  [],
