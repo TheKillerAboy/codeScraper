@@ -14,6 +14,6 @@ template-file:
   python: ~
 commands:
   gpp-compile:
-    win32: "g++ {cpp} -o {exe}"
+    win32: "g++ {cpp} -std=c++17 -o {exe}"
   run-inputs:
     win32: "{exe} < {input}"
