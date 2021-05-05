@@ -20,6 +20,8 @@ if getattr(sys, 'frozen', False):
 else:
     CONFIG_FILE_DIR = Path(sys.argv[0]) / '..' / 'config.yaml'
 
+CONFIG_FILE_DIR = CONFIG_FILE_DIR.resolve()
+
 with open(CONFIG_FILE_DIR,'r') as f:
     CONFIG = yaml.load(f, Loader=yaml.FullLoader)
 
@@ -42,7 +44,7 @@ class Scrapper:
     async def handle_inputs(self, *args, **kwargs):
         self.contest_id = args[0]
 
-        self.source_dir = self.make_directory(None if 'source_dir' not in kwargs else kwargs['source_dir'], Path(sys.argv[0])/'..')
+        self.source_dir = self.make_directory(None if 'source_dir' not in kwargs else kwargs['source_dir'], (Path(sys.argv[0])/'..').resolve())
 
         self.file_extensions = self.update_non_exist_keys(None if 'file_extensions' not in kwargs else kwargs['file_extensions'], CONFIG['file-extensions']['defaults'])
 
@@ -137,13 +139,16 @@ class FireOperator:
         self.loop.run_until_complete(self.scrapper.run(*args, **kwargs))
 
     def open_config(self):
-        webbrowser.open_new_tab(CONFIG_FILE_DIR)
+        try:
+            webbrowser.open_new_tab(CONFIG_FILE_DIR)
+        except:
+            print(f'Can\'t open file, directory: {CONFIG_FILE_DIR.resolve().absolute()}')
 
     def run_inputs(self, full_cpp_file):
         def get_command(command, **formating):
             if sys.platform not in CONFIG['commands'][command]:
                 print(f'Edit Config: no {command} command for {sys.platform}')
-                exit()
+                sys.exit()
             return CONFIG['commands'][command][sys.platform].format(**formating)
 
         def tokenize(data):
@@ -156,10 +161,10 @@ class FireOperator:
                 data = ''.join(f.readlines())
             return data
 
-        full_cpp_file = Path(full_cpp_file)
+        full_cpp_file = Path(full_cpp_file).resolve().absolute()
         directory = full_cpp_file.parent
         base_file = full_cpp_file.stem
-        full_exe_file = directory/f'{base_file}.exe'
+        full_exe_file = directory/(f'{base_file}'+get_command('extension'))
 
         compile_cmd = get_command('gpp-compile',cpp=f'"{full_cpp_file}"',exe=f'"{full_exe_file}"')
         print(f'Compiling {full_exe_file.name}')
