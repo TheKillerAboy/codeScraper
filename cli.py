@@ -16,7 +16,10 @@ import aiofiles as aiof
 from boltons import strutils
 
 if getattr(sys, 'frozen', False):
-    CONFIG_FILE_DIR = Path(sys._MEIPASS) / 'config.yaml'
+    try:
+        CONFIG_FILE_DIR = Path(sys._MEIPASS) / 'config.yaml'
+    except:
+        CONFIG_FILE_DIR = Path('etc')/'codeScraper.conf'
 else:
     CONFIG_FILE_DIR = Path(sys.argv[0]) / '..' / 'config.yaml'
 
