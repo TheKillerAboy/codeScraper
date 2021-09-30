@@ -16,10 +16,9 @@ import aiofiles as aiof
 from boltons import strutils
 
 if getattr(sys, 'frozen', False):
-    try:
+    CONFIG_FILE_DIR = Path('/etc')/'codeScraper.conf'
+    if not CONFIG_FILE_DIR.exists():
         CONFIG_FILE_DIR = Path(sys._MEIPASS) / 'config.yaml'
-    except:
-        CONFIG_FILE_DIR = Path('etc')/'codeScraper.conf'
 else:
     CONFIG_FILE_DIR = Path(sys.argv[0]) / '..' / 'config.yaml'
 
@@ -47,7 +46,7 @@ class Scrapper:
     async def handle_inputs(self, *args, **kwargs):
         self.contest_id = args[0]
 
-        self.source_dir = self.make_directory(None if 'source_dir' not in kwargs else kwargs['source_dir'], (Path(sys.argv[0])/'..').resolve())
+        self.source_dir = self.make_directory(None if 'source_dir' not in kwargs else kwargs['source_dir'], Path.cwd())
 
         self.file_extensions = self.update_non_exist_keys(None if 'file_extensions' not in kwargs else kwargs['file_extensions'], CONFIG['file-extensions']['defaults'])
 
