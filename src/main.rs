@@ -1,23 +1,19 @@
-mod codeforces;
-use error_chain::error_chain;
-use std::path::Path;
-use futures::{executor, future};
+#[macro_use]
+extern crate clap;
 
-error_chain! {
-    foreign_links {
-        Io(std::io::Error);
-        HttpRequest(reqwest::Error);
-        Codeforces(codeforces::Error);
-    }
-}
+use std::error::Error;
+pub type Result<T> = std::result::Result<T,Box<dyn Error>>;
+
+pub mod cli;
+use cli::cli;
+
+pub mod scraper;
+pub mod files;
+pub mod config;
 
 #[tokio::main]
 async fn main() -> Result<()>{
-    let contest_id = 1611;
-    let problems = codeforces::list_contest_problems(contest_id).await?;
-    let dir = Path::new("/Users/annekin.meyburgh/workspace/codeScraper/tmp");
-    let futures = problems.iter().map(|problem| codeforces::write_io(&dir, contest_id, &problem));
+    cli().await?;
 
-    let _results = future::join_all(futures).await;
     Ok(())
 }

@@ -1,0 +1,10 @@
+---
+templates:
+  cpp: /Users/annekin.meyburgh/workspace/programming-olympiad/C++_Solutions/TEMPLATES/TEMPLATE.cpp
+current-lang: cpp
+compile:
+  cpp:
+    macos: "/usr/local/bin/g++ {src} -o {dest}"
+test:
+  cpp:
+    macos: "{dest} < {testin} > {testtmp}; diff -w {testout} {testtmp}; rm {testtmp}"

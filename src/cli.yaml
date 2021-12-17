@@ -1,0 +1,54 @@
+name: codeScraper
+version: "1.0"
+author: Annekin M. <annekin001@gmail.com>
+subcommands:
+    - get:
+        about: Get the data for the contest
+        version: "1.3"
+        author: Annekin M. <annekin001@gmail.com>
+        args:
+            - CONTEST_ID:
+                help: The contest id
+                required: true
+                index: 1
+            - directory:
+                short: d
+                long: dir
+                value_name: DIRECTORY
+                help: Directory to write into
+                takes_value: true
+    - test:
+        about: Compile and test source
+        version: "1.3"
+        author: Annekin M. <annekin001@gmail.com>
+        args:
+            - SOURCE:
+                help: source to test
+                required: true
+                index: 1
+    - config:
+        about: Config related operations
+        version: "1.3"
+        author: Annekin M. <annekin001@gmail.com>
+        subcommands:
+            - set:
+                about: Set configs
+                version: "1.3"
+                author: Annekin M. <annekin001@gmail.com>
+                args:
+                    - KEY:
+                        help: >
+                            Settings in config:
+                            Key             Value
+                            lang            cpp|
+                            template-cpp    path to cpp template
+                        required: true
+                        index: 1
+                    - VALUE:
+                        help: >
+                            Settings in config:
+                            Key             Value
+                            lang            cpp|
+                            template-cpp    path to cpp template
+                        required: true
+                        index: 2
