@@ -1,6 +1,2 @@
-/venv/
-/dist/
-/build/
-/test/
-/.idea/
-/tmp/
+/target
+tmp/
